@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".modal-bg").length&&($("a").click(function(e){"#contact"==$(this).attr("href")&&(e.preventDefault(),$(".modal-bg").fadeIn(500))}),$(".close-button").click(function(){$(".modal-bg").fadeOut(500)})),$(".carousel").slick({infinite:!0,slidesToShow:1,slidesToScroll:1,fade:!0,autoplay:!0,autoplaySpeed:4e3,arrows:!1,dots:!1,swipe:!1,pauseOnHover:!1})});

@@ -1,0 +1,188 @@
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $brand;
+    border-radius: 0px;
+}
+
+.touchable-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 500;
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-family: $title;
+  }
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+  }
+  .content {
+    height: 80vh;
+    max-width: 100vw;
+    width: 800px;
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    .top, .main {
+      padding: 30px;
+      h2 {
+        font-weight: 600;
+      }
+      h3 {
+        margin-top: 15px;
+        font-weight: 100;
+        font-size: 1rem;
+      }
+    }
+
+    .modal-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      @media(max-width: 600px) {
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    .left {
+      width: 35%;
+      height: 100%;
+      background-image: url('../img/modal.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media(max-width: 600px) {
+        display: none;
+      }
+    }
+    .right {
+      width: 65%;
+      overflow-y: scroll;
+      @media(max-width: 600px) {
+        width: 100%;
+        padding-top: 100px;
+      }
+    }
+  }
+
+  .upper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nf-form-cont {
+    width: 100%;
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    .section {
+      width: 25%;
+      // min-width: 200px;
+      margin-top: 15px;
+    }
+    img {
+      border-radius: 50%;
+      height: 70px;
+      width: auto;
+      display: block;
+      align-self: flex-start;
+      margin-right: 20px;
+    }
+    @media(max-width: 800px) {
+      .section {
+        text-align: center;
+      }
+    }
+    @media(max-width: 350px) {
+      img {
+        margin-right: 0;
+      }
+    }
+  }
+}
+textarea {
+  resize: none;
+  height: 80px !important;
+}
+input[type="text"],
+textarea,
+input[type="email"],
+input[type="tel"] {
+  border: 0;
+  border-bottom: 1px solid $grey;
+  font-family: $title;
+  border-radius: 0;
+}
+label {
+  @extend .h5;
+  font-family: $title;
+  font-size: .7rem;
+  color: $brand1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+ul li label {
+  color: $grey;
+  font-weight: 100;
+}
+.nf-field-label {
+  margin-top: 0 !important;
+}
+
+input[type="button"] {
+  @extend .btn_1;
+  // background: none;
+  line-height: normal;
+  min-width: 250px;
+  background-position: 90% center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.nf-form-fields-required,
+.nf-form-title,
+.ninja-forms-req-symbol {
+  display: none;
+}
+
+.nf-error-msg {
+  font-family: $title;
+  font-size: .7rem;
+}
+.nf-error-field-errors {
+  display: none;
+}
