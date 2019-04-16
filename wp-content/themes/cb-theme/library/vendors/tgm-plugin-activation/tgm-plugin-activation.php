@@ -31,9 +31,7 @@
  * Plugin:
  * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
  */
-require_once get_template_directory() . '/library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'cb_neat_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.

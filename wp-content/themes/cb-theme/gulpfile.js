@@ -9,7 +9,7 @@
 | >   PROJECT VARIABLES
 ******************************************************************************/
 var project    = 'CB Theme';
-var url        = 'localhost:8888/mkt-splash';
+var url        = 'localhost:8888/WP_TEMPLATE';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
