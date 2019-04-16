@@ -8,9 +8,6 @@ $title: 'Helvetica', sans-serif;
 /* =Typographical Mixins/Functions
 -------------------------------------------------------------- */
 
-
-
-
 //SIZING
 $font-min : 16px;
 $font-min-int : 16;
@@ -57,7 +54,6 @@ h5, .h5 {
     font-size: .7em;
     font-family: $sans;
     text-transform: uppercase;
-    color: $brand1;
     letter-spacing: 1px;
 }
 h6, .h6 {
@@ -88,7 +84,6 @@ a {
   font-family: $sans;
   transition: all 400ms;
   &:hover {
-    color: $brand1;
   }
 }
 
@@ -134,5 +129,5 @@ textarea, input {
 }
 
 textarea:focus, input:focus {
-  border: 1px solid $brand;
+  border: 1px solid $black;
 }

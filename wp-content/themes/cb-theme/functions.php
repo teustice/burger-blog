@@ -135,57 +135,7 @@ endif; // Enqueue styles
 
 // Theme images sizes
 function add_image_sizes() {
-	 add_image_size( 'tenant-carousel', 300, 185, 'center');
+	 // add_image_size( 'YOUR_IMAGE_SIZE', 300, 185, 'center');
 }
 
 add_action( 'after_setup_theme', 'add_image_sizes' );
-
-
-
-
-
-// SERVICES CHECKBOX
-add_filter('acf/load_field/name=cs_services', 'acf_load_services');
-
-function acf_load_services($field) {
-	$query = new WP_Query(array(
-    'post_type' => 'service',
-    'post_status' => 'publish',
-		'posts_per_page' => '-1'
-	));
-
-
-	while ($query->have_posts()) {
-    $query->the_post();
-		$field['choices'][get_the_ID()] = get_the_title();
-	}
-
-	wp_reset_query();
-
-  // return the field
-  return $field;
-}
-
-
-
-// TECHNOLOGIES CHECKBOX
-add_filter('acf/load_field/name=cs_technology', 'acf_load_technologies');
-
-function acf_load_technologies($field) {
-	$query = new WP_Query(array(
-    'post_type' => 'technology',
-    'post_status' => 'publish',
-		'posts_per_page' => '-1'
-	));
-
-
-	while ($query->have_posts()) {
-    $query->the_post();
-		$field['choices'][get_the_ID()] = get_the_title();
-	}
-
-	wp_reset_query();
-
-  // return the field
-  return $field;
-}
