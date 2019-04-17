@@ -36,6 +36,10 @@ if ( ! function_exists( 'cb_neat_setup' ) ) :
 		*/
 		add_theme_support( 'title-tag' );
 
+
+		// Add menu support
+		add_theme_support( 'menus' );
+
 		/*
 		* Add Editor Style for adequate styling in text editor.
 		*
@@ -75,8 +79,8 @@ if ( ! function_exists( 'cb_neat_scripts' ) ) :
 		// wp_register_script('slick', get_theme_file_uri("/assets/js/slick.js"), false, null);
 		// wp_enqueue_script('slick');
 
-		// wp_register_script('scrollreveal', get_theme_file_uri("/assets/js/scrollreveal.min.js"), false, null);
-		// wp_enqueue_script('scrollreveal');
+		wp_register_script('scrollreveal', get_theme_file_uri("/assets/js/scrollreveal.min.js"), false, null);
+		wp_enqueue_script('scrollreveal');
 
 
 
@@ -139,3 +143,15 @@ function add_image_sizes() {
 }
 
 add_action( 'after_setup_theme', 'add_image_sizes' );
+
+
+function get_snippet($str, $length){
+	if(strlen($str) > $length) {
+		$newword = str_split($str,$length);
+
+		return  $newword[0]."...";
+	}
+	else {
+		return stripslashes($str);
+	}
+}

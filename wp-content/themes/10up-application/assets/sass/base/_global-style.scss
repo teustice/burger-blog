@@ -14,22 +14,8 @@ body {
   }
 }
 
-.container {
-  width: calc(100vw - 15%);
-  max-width: 1500px;
-  margin: auto;
-  @media(max-width: 800px){
-    width: 100vw;
-    padding: 0 15px;
-  }
-}
-
 .hidden {
   display: none;
-}
-
-.flex {
-  display: flex;
 }
 
 .uppercase {

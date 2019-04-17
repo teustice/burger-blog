@@ -6,5 +6,3 @@ production.js or development.js files in functions.php or directly in your marku
 
 Consideration: These scripts load on all pages. So if your script isn't required to be called everywhere you may not
 want to place file here.
-
-Also, files placed in the scripts sub-folder will compile after the files placed in this folder. Therefore, place dependencies in 'app' and place your scripts in 'scripts'.

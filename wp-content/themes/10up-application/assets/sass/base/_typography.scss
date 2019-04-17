@@ -1,27 +1,8 @@
-@import 'fonts';
 
 //FONTS
-$sans: 'Helvetica', sans-serif;
-$title: 'Helvetica', sans-serif;
+$sans: 'Raleway', sans-serif;
+$title: 'Raleway', sans-serif;
 
-
-/* =Typographical Mixins/Functions
--------------------------------------------------------------- */
-
-//SIZING
-$font-min : 16px;
-$font-min-int : 16;
-
-$font-max : 18px;
-$font-max-int : 18;
-
-$view-min : 600px;
-$view-min-int : 600;
-$view-max : 1500;
-
-html {
-  font-size: calc(#{$font-min} + (#{$font-max-int} - #{$font-min-int}) * ((100vw - #{$view-min}) / (#{$view-max} - #{$view-min-int})));
-}
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     float: none;
@@ -29,26 +10,26 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 h1, .h1 {
-    font-size: 2.4em;
+    font-size: 36px;
     font-family: $title;
-    letter-spacing: 2.5px;
     font-weight: 500;
     text-transform: uppercase;
 }
 h2, .h2 {
-    font-size: 1.8em;
+    font-size: 36px;
     font-family: $title;
     font-weight: 500;
 }
 h3, .h3 {
-    font-size: 1.4em;
+    font-size: 36px;
     font-family: $sans;
     font-weight: 100;
 }
 h4, .h4 {
-    font-size: .7em;
+    font-size: 14px;
+    color: $grey;
     font-family: $title;
-    text-transform: uppercase;
+    font-weight: 500;
 }
 h5, .h5 {
     font-size: .7em;
@@ -61,7 +42,7 @@ h6, .h6 {
     font-family: $title;
 }
 p, i, strong {
-  font-size: .9em;
+  font-size: 14px;
   font-family: $sans;
   line-height: 28px;
 }
@@ -78,18 +59,20 @@ strong, b {
     font-family: $title;
 }
 a {
-  color: $primary-font-color;
-  text-decoration: none;
-  font-size: .7em;
+  color: $link-color;
+  text-decoration: underline;
   font-family: $sans;
-  transition: all 400ms;
+  font-size: 14px;
+  transition: all 200ms;
+
   &:hover {
+    color: $brand2;
   }
 }
 
 li {
   list-style: none;
-  font-size: .9em;
+  font-size: 18px;
   margin-bottom: 10px;
   font-family: $sans;
 }
@@ -109,7 +92,7 @@ label {
   margin-bottom: 10px;
 }
 input, input::placeholder, textarea, textarea::placeholder {
-  font-size: .9em;
+  font-size: 16px;
   font-family: $sans;
   margin-bottom: 20px;
   // padding: 7px;

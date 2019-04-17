@@ -1,0 +1,17 @@
+.post-single .post-tile img {
+  margin: auto;
+}
+
+.post-tile {
+   padding-top: 20px;
+   padding-bottom: 20px;
+
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+
+   .content {
+     margin-top: 20px;
+   }
+}
