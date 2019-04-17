@@ -8,8 +8,8 @@
 /******************************************************************************
 | >   PROJECT VARIABLES
 ******************************************************************************/
-var project    = 'CB Theme';
-var url        = 'localhost:8888/WP_TEMPLATE';
+var project    = '10up Application';
+var url        = 'localhost:8888/10up';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
