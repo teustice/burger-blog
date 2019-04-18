@@ -1,7 +1,7 @@
 'use strict';
 
 $(function() {
-  window.sr = ScrollReveal();
+  window.sr = new ScrollReveal();
 
   if($('.post-tile').length) {
     sr.reveal('.post-tile *', {
@@ -13,4 +13,4 @@ $(function() {
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
     }, 50);
   }
-})
+});

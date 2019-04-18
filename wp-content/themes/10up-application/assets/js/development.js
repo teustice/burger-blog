@@ -17,7 +17,7 @@ $(function () {
 'use strict';
 
 $(function () {
-  window.sr = ScrollReveal();
+  window.sr = new ScrollReveal();
 
   if ($('.post-tile').length) {
     sr.reveal('.post-tile *', {
